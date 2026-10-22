@@ -1,0 +1,69 @@
+====================================
+ ANALIZADOR SINTACTICO SLR(1)
+ Mini-Comandos de Terminal
+====================================
+
+Introduce una cadena de tokens:
+> 
+Iniciando analisis sintactico...
+
+Pila: 0 
+Token actual: crear
+SHIFT al estado 7
+
+Pila: 0 7 
+Token actual: id
+SHIFT al estado 15
+
+Pila: 0 7 15 
+Token actual: ;
+REDUCE con produccion 18
+
+Pila: 0 7 20 
+Token actual: ;
+SHIFT al estado 33
+
+Pila: 0 7 20 33 
+Token actual: $
+REDUCE con produccion 4
+
+Pila: 0 1 
+Token actual: $
+REDUCE con produccion 3
+
+Pila: 0 2 
+Token actual: $
+REDUCE con produccion 1
+
+Pila: 0 3 
+Token actual: $
+CADENA ACEPTADA
+
+====================================
+ ARBOL SINTACTICO
+====================================
+
+|-- Programa
+    |-- Lista
+        |-- Comando
+            |-- crear
+            |-- Archivo
+                |-- id
+            |-- ;
+
+====================================
+ AST SIMPLIFICADO
+====================================
+
+|-- Programa
+    |-- crear
+        |-- Archivo: id
+
+
+====================================
+ RESULTADO DEL ANALISIS
+====================================
+Desplazamientos: 3
+Reducciones: 4
+Errores: 0
+Resultado: CADENA VALIDA

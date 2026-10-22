@@ -1,0 +1,57 @@
+====================================
+ ANALIZADOR SINTACTICO SLR(1)
+ Mini-Comandos de Terminal
+====================================
+
+Introduce una cadena de tokens:
+> 
+Iniciando analisis sintactico...
+
+Pila: 0 
+Token actual: ejecutar
+SHIFT al estado 8
+
+Pila: 0 8 
+Token actual: (
+SHIFT al estado 21
+
+Pila: 0 8 21 
+Token actual: id
+SHIFT al estado 24
+
+Pila: 0 8 21 24 
+Token actual: +
+REDUCE con produccion 15
+
+Pila: 0 8 21 23 
+Token actual: +
+REDUCE con produccion 14
+
+Pila: 0 8 21 34 
+Token actual: +
+SHIFT al estado 35
+
+Pila: 0 8 21 34 35 
+Token actual: num
+SHIFT al estado 25
+
+Pila: 0 8 21 34 35 25 
+Token actual: ;
+REDUCE con produccion 16
+
+Pila: 0 8 21 34 35 42 
+Token actual: ;
+REDUCE con produccion 13
+
+Pila: 0 8 21 34 
+Token actual: ;
+ERROR SINTACTICO
+Token inesperado: ;
+
+====================================
+ RESULTADO DEL ANALISIS
+====================================
+Desplazamientos: 5
+Reducciones: 4
+Errores: 1
+Resultado: CADENA INVALIDA

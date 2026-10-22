@@ -1,0 +1,7 @@
+====================================
+ ANALIZADOR SINTACTICO SLR(1)
+ Mini-Comandos de Terminal
+====================================
+
+Introduce una cadena de tokens:
+> Error: token desconocido 'eliminar'

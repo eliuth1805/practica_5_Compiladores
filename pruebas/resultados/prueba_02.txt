@@ -1,0 +1,122 @@
+====================================
+ ANALIZADOR SINTACTICO SLR(1)
+ Mini-Comandos de Terminal
+====================================
+
+Introduce una cadena de tokens:
+> 
+Iniciando analisis sintactico...
+
+Pila: 0 
+Token actual: crear
+SHIFT al estado 7
+
+Pila: 0 7 
+Token actual: id
+SHIFT al estado 15
+
+Pila: 0 7 15 
+Token actual: ;
+REDUCE con produccion 18
+
+Pila: 0 7 20 
+Token actual: ;
+SHIFT al estado 33
+
+Pila: 0 7 20 33 
+Token actual: borrar
+REDUCE con produccion 4
+
+Pila: 0 1 
+Token actual: borrar
+REDUCE con produccion 3
+
+Pila: 0 2 
+Token actual: borrar
+SHIFT al estado 4
+
+Pila: 0 2 4 
+Token actual: ruta
+SHIFT al estado 17
+
+Pila: 0 2 4 17 
+Token actual: ;
+REDUCE con produccion 19
+
+Pila: 0 2 4 14 
+Token actual: ;
+SHIFT al estado 30
+
+Pila: 0 2 4 14 30 
+Token actual: listar
+REDUCE con produccion 5
+
+Pila: 0 2 13 
+Token actual: listar
+REDUCE con produccion 2
+
+Pila: 0 2 
+Token actual: listar
+SHIFT al estado 9
+
+Pila: 0 2 9 
+Token actual: ;
+SHIFT al estado 26
+
+Pila: 0 2 9 26 
+Token actual: $
+REDUCE con produccion 11
+
+Pila: 0 2 13 
+Token actual: $
+REDUCE con produccion 2
+
+Pila: 0 2 
+Token actual: $
+REDUCE con produccion 1
+
+Pila: 0 3 
+Token actual: $
+CADENA ACEPTADA
+
+====================================
+ ARBOL SINTACTICO
+====================================
+
+|-- Programa
+    |-- Lista
+        |-- Lista
+            |-- Lista
+                |-- Comando
+                    |-- crear
+                    |-- Archivo
+                        |-- id
+                    |-- ;
+            |-- Comando
+                |-- borrar
+                |-- Archivo
+                    |-- ruta
+                |-- ;
+        |-- Comando
+            |-- listar
+            |-- ;
+
+====================================
+ AST SIMPLIFICADO
+====================================
+
+|-- Programa
+    |-- crear
+        |-- Archivo: id
+    |-- borrar
+        |-- Archivo: ruta
+    |-- listar
+
+
+====================================
+ RESULTADO DEL ANALISIS
+====================================
+Desplazamientos: 8
+Reducciones: 9
+Errores: 0
+Resultado: CADENA VALIDA

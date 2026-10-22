@@ -1,0 +1,118 @@
+====================================
+ ANALIZADOR SINTACTICO SLR(1)
+ Mini-Comandos de Terminal
+====================================
+
+Introduce una cadena de tokens:
+> 
+Iniciando analisis sintactico...
+
+Pila: 0 
+Token actual: ejecutar
+SHIFT al estado 8
+
+Pila: 0 8 
+Token actual: id
+SHIFT al estado 24
+
+Pila: 0 8 24 
+Token actual: +
+REDUCE con produccion 15
+
+Pila: 0 8 23 
+Token actual: +
+REDUCE con produccion 14
+
+Pila: 0 8 22 
+Token actual: +
+SHIFT al estado 35
+
+Pila: 0 8 22 35 
+Token actual: num
+SHIFT al estado 25
+
+Pila: 0 8 22 35 25 
+Token actual: +
+REDUCE con produccion 16
+
+Pila: 0 8 22 35 42 
+Token actual: +
+REDUCE con produccion 13
+
+Pila: 0 8 22 
+Token actual: +
+SHIFT al estado 35
+
+Pila: 0 8 22 35 
+Token actual: id
+SHIFT al estado 24
+
+Pila: 0 8 22 35 24 
+Token actual: ;
+REDUCE con produccion 15
+
+Pila: 0 8 22 35 42 
+Token actual: ;
+REDUCE con produccion 13
+
+Pila: 0 8 22 
+Token actual: ;
+SHIFT al estado 36
+
+Pila: 0 8 22 36 
+Token actual: $
+REDUCE con produccion 12
+
+Pila: 0 1 
+Token actual: $
+REDUCE con produccion 3
+
+Pila: 0 2 
+Token actual: $
+REDUCE con produccion 1
+
+Pila: 0 3 
+Token actual: $
+CADENA ACEPTADA
+
+====================================
+ ARBOL SINTACTICO
+====================================
+
+|-- Programa
+    |-- Lista
+        |-- Comando
+            |-- ejecutar
+            |-- Accion
+                |-- Accion
+                    |-- Accion
+                        |-- Elemento
+                            |-- id
+                    |-- +
+                    |-- Elemento
+                        |-- num
+                |-- +
+                |-- Elemento
+                    |-- id
+            |-- ;
+
+====================================
+ AST SIMPLIFICADO
+====================================
+
+|-- Programa
+    |-- ejecutar
+        |-- Suma
+            |-- Suma
+                |-- id
+                |-- num
+            |-- id
+
+
+====================================
+ RESULTADO DEL ANALISIS
+====================================
+Desplazamientos: 7
+Reducciones: 9
+Errores: 0
+Resultado: CADENA VALIDA

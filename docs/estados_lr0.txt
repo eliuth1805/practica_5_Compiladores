@@ -1,0 +1,205 @@
+COLECCION CANONICA LR(0)
+=======================
+
+Estado I0
+  [0] S' -> · Programa
+  [1] Programa -> · Lista
+  [2] Lista -> · Lista Comando
+  [3] Lista -> · Comando
+  [4] Comando -> · crear Archivo ;
+  [5] Comando -> · borrar Archivo ;
+  [6] Comando -> · copiar Archivo Archivo ;
+  [7] Comando -> · mover Archivo Archivo ;
+  [8] Comando -> · mostrar Archivo ;
+  [9] Comando -> · buscar Archivo ;
+  [10] Comando -> · renombrar Archivo Archivo ;
+  [11] Comando -> · listar ;
+  [12] Comando -> · ejecutar Accion ;
+
+Estado I1
+  [3] Lista -> Comando ·
+
+Estado I2
+  [1] Programa -> Lista ·
+  [2] Lista -> Lista · Comando
+  [4] Comando -> · crear Archivo ;
+  [5] Comando -> · borrar Archivo ;
+  [6] Comando -> · copiar Archivo Archivo ;
+  [7] Comando -> · mover Archivo Archivo ;
+  [8] Comando -> · mostrar Archivo ;
+  [9] Comando -> · buscar Archivo ;
+  [10] Comando -> · renombrar Archivo Archivo ;
+  [11] Comando -> · listar ;
+  [12] Comando -> · ejecutar Accion ;
+
+Estado I3
+  [0] S' -> Programa ·
+
+Estado I4
+  [5] Comando -> borrar · Archivo ;
+  [18] Archivo -> · id
+  [19] Archivo -> · ruta
+  [20] Archivo -> · nombre
+
+Estado I5
+  [9] Comando -> buscar · Archivo ;
+  [18] Archivo -> · id
+  [19] Archivo -> · ruta
+  [20] Archivo -> · nombre
+
+Estado I6
+  [6] Comando -> copiar · Archivo Archivo ;
+  [18] Archivo -> · id
+  [19] Archivo -> · ruta
+  [20] Archivo -> · nombre
+
+Estado I7
+  [4] Comando -> crear · Archivo ;
+  [18] Archivo -> · id
+  [19] Archivo -> · ruta
+  [20] Archivo -> · nombre
+
+Estado I8
+  [12] Comando -> ejecutar · Accion ;
+  [13] Accion -> · Accion + Elemento
+  [14] Accion -> · Elemento
+  [15] Elemento -> · id
+  [16] Elemento -> · num
+  [17] Elemento -> · ( Accion )
+
+Estado I9
+  [11] Comando -> listar · ;
+
+Estado I10
+  [8] Comando -> mostrar · Archivo ;
+  [18] Archivo -> · id
+  [19] Archivo -> · ruta
+  [20] Archivo -> · nombre
+
+Estado I11
+  [7] Comando -> mover · Archivo Archivo ;
+  [18] Archivo -> · id
+  [19] Archivo -> · ruta
+  [20] Archivo -> · nombre
+
+Estado I12
+  [10] Comando -> renombrar · Archivo Archivo ;
+  [18] Archivo -> · id
+  [19] Archivo -> · ruta
+  [20] Archivo -> · nombre
+
+Estado I13
+  [2] Lista -> Lista Comando ·
+
+Estado I14
+  [5] Comando -> borrar Archivo · ;
+
+Estado I15
+  [18] Archivo -> id ·
+
+Estado I16
+  [20] Archivo -> nombre ·
+
+Estado I17
+  [19] Archivo -> ruta ·
+
+Estado I18
+  [9] Comando -> buscar Archivo · ;
+
+Estado I19
+  [6] Comando -> copiar Archivo · Archivo ;
+  [18] Archivo -> · id
+  [19] Archivo -> · ruta
+  [20] Archivo -> · nombre
+
+Estado I20
+  [4] Comando -> crear Archivo · ;
+
+Estado I21
+  [13] Accion -> · Accion + Elemento
+  [14] Accion -> · Elemento
+  [15] Elemento -> · id
+  [16] Elemento -> · num
+  [17] Elemento -> · ( Accion )
+  [17] Elemento -> ( · Accion )
+
+Estado I22
+  [12] Comando -> ejecutar Accion · ;
+  [13] Accion -> Accion · + Elemento
+
+Estado I23
+  [14] Accion -> Elemento ·
+
+Estado I24
+  [15] Elemento -> id ·
+
+Estado I25
+  [16] Elemento -> num ·
+
+Estado I26
+  [11] Comando -> listar ; ·
+
+Estado I27
+  [8] Comando -> mostrar Archivo · ;
+
+Estado I28
+  [7] Comando -> mover Archivo · Archivo ;
+  [18] Archivo -> · id
+  [19] Archivo -> · ruta
+  [20] Archivo -> · nombre
+
+Estado I29
+  [10] Comando -> renombrar Archivo · Archivo ;
+  [18] Archivo -> · id
+  [19] Archivo -> · ruta
+  [20] Archivo -> · nombre
+
+Estado I30
+  [5] Comando -> borrar Archivo ; ·
+
+Estado I31
+  [9] Comando -> buscar Archivo ; ·
+
+Estado I32
+  [6] Comando -> copiar Archivo Archivo · ;
+
+Estado I33
+  [4] Comando -> crear Archivo ; ·
+
+Estado I34
+  [13] Accion -> Accion · + Elemento
+  [17] Elemento -> ( Accion · )
+
+Estado I35
+  [13] Accion -> Accion + · Elemento
+  [15] Elemento -> · id
+  [16] Elemento -> · num
+  [17] Elemento -> · ( Accion )
+
+Estado I36
+  [12] Comando -> ejecutar Accion ; ·
+
+Estado I37
+  [8] Comando -> mostrar Archivo ; ·
+
+Estado I38
+  [7] Comando -> mover Archivo Archivo · ;
+
+Estado I39
+  [10] Comando -> renombrar Archivo Archivo · ;
+
+Estado I40
+  [6] Comando -> copiar Archivo Archivo ; ·
+
+Estado I41
+  [17] Elemento -> ( Accion ) ·
+
+Estado I42
+  [13] Accion -> Accion + Elemento ·
+
+Estado I43
+  [7] Comando -> mover Archivo Archivo ; ·
+
+Estado I44
+  [10] Comando -> renombrar Archivo Archivo ; ·
+
