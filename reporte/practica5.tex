@@ -17,17 +17,21 @@
 \usepackage{fancyvrb}
 \usepackage{hyperref}
 \usepackage{xcolor}
+\usepackage{titlesec}
 
 % ==================================================
 % CONFIGURACION
 % ==================================================
 
-\geometry{margin=2.2cm}
+\geometry{margin=2cm}
 
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{5pt}
+\setlength{\parskip}{3pt}
 
 \sloppy
+\titlespacing*{\section}{0pt}{12pt}{7pt}
+\titlespacing*{\subsection}{0pt}{10pt}{5pt}
+\titlespacing*{\subsubsection}{0pt}{8pt}{4pt}
 
 \hypersetup{
     colorlinks=true,
@@ -729,7 +733,7 @@ las expresiones y la detección de errores.
 
 \small
 
-\begin{longtable}{|c|p{4.4cm}|p{1.6cm}|p{6cm}|}
+\begin{longtable}{|c|p{4.2cm}|p{2cm}|p{5.8cm}|}
 \hline
 \textbf{Prueba} &
 \textbf{Entrada} &
@@ -833,7 +837,7 @@ entradas utilizadas durante las pruebas.
 % 5. REPOSITORIO
 % ==================================================
 
-\section*{5. Repositorio público}
+\section*{5. Repositorio de GitHub}
 
 El código fuente del analizador, las tablas
 SLR(1), la documentación y los casos de prueba
@@ -846,16 +850,9 @@ y reproducir las pruebas realizadas.
 \textbf{Enlace al repositorio:}
 
 \begin{center}
-\texttt{PENDIENTE: agregar enlace público de GitHub}
+\url{https://github.com/eliuth1805/practica_5_Compiladores}
 \end{center}
 
 % ==================================================
-% NOTA SOBRE ACTIVIDAD PENDIENTE
-% ==================================================
-
-% El ejercicio adicional de auditoria con IA
-% se incorporara cuando se complete y revise.
-% No debe entregarse el reporte como definitivo
-% mientras esa actividad siga pendiente.
 
 \end{document}
