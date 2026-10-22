@@ -22,3 +22,4 @@ Thumbs.db
 *.synctex.gz
 *.fls
 *.fdb_latexmk
+/reporte/*.tex
